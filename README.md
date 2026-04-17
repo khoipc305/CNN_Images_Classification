@@ -4,7 +4,7 @@ A Convolutional Neural Network (CNN) implementation using TensorFlow and Keras t
 
 ## Overview
 
-This project trains a CNN model to recognize handwritten digits with **93.54% test accuracy**. The model uses convolutional layers, max pooling, and dense layers to extract features and classify images.
+This project trains a CNN model to recognize handwritten digits with **~92% test accuracy**. The model uses convolutional layers, max pooling, and dense layers to extract features and classify images.
 
 ## Requirements
 
@@ -52,7 +52,7 @@ The model will:
 
 ## Results
 
-- **Test Accuracy**: 93.54%
+- **Test Accuracy**: ~92% (0.9199)
 - **Training**: 10 epochs, SGD optimizer
 - **Loss Function**: Sparse Categorical Crossentropy
 
