@@ -36,8 +36,6 @@ pip install tensorflow numpy pillow
 
 ## Dataset
 
-**Note:** The `digit_dataset/` folder is excluded from this repository due to file size. Extract `digit_dataset.zip` to the project directory before running.
-
 The dataset contains 32x32 grayscale images of handwritten digits (0-9) organized in:
 - `digit_dataset/train/` - Training images
 - `digit_dataset/test/` - Test images
