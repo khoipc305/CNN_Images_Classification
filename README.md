@@ -1,19 +1,27 @@
-# CNN Images Classification
+# Handwritten Digit Classification using CNN
 
-A Convolutional Neural Network (CNN) implementation using TensorFlow and Keras to classify 32x32 images of handwritten digits (0-9).
+This project implements a Convolutional Neural Network (CNN) to classify handwritten digits from 0 to 9. The model is built using TensorFlow and Keras.
 
-## Overview
+## Project Structure
 
-This project trains a CNN model to recognize handwritten digits with **~92% test accuracy**. The model uses convolutional layers, max pooling, and dense layers to extract features and classify images.
+```
+CNN/
+├── cnn.py                    # Main Python script containing the CNN implementation
+├── requirements.txt          # Project dependencies
+├── digit_dataset/            # Directory containing training and test images
+│   ├── train/                # Training image dataset
+│   └── test/                 # Test image dataset
+└── README.md                 # Project documentation
+```
 
 ## Requirements
 
-- Python 3.x
-- TensorFlow
-- NumPy
-- Pillow (PIL)
+Install dependencies using:
+```bash
+pip install -r requirements.txt
+```
 
-Install dependencies:
+Or install manually:
 ```bash
 pip install tensorflow numpy pillow
 ```
@@ -28,43 +36,33 @@ pip install tensorflow numpy pillow
 
 ## Dataset
 
-**Note:** The `digit_dataset/` folder is excluded from this repository due to its large size. The dataset is provided separately as `digit_dataset.zip`.
+**Note:** The `digit_dataset/` folder is excluded from this repository due to file size. Extract `digit_dataset.zip` to the project directory before running.
 
-### Dataset Structure
+The dataset contains 32x32 grayscale images of handwritten digits (0-9) organized in:
+- `digit_dataset/train/` - Training images
+- `digit_dataset/test/` - Test images
 
-The model expects images in the following structure:
-```
-digit_dataset/
-├── train/    (training images)
-└── test/     (test images)
-```
-
-Images should be 32x32 grayscale handwritten digits with filenames starting with their label (e.g., `0_image1.png`, `1_image2.png`).
-
-### Setup Instructions
-
-1. Obtain the `digit_dataset.zip` file (provided with assignment)
-2. Extract it to the project root directory
-3. The folder structure should be: `Asssignment 4/digit_dataset/train/` and `Asssignment 4/digit_dataset/test/`
+Image filenames start with their corresponding label (e.g., `0_001.png`, `1_002.png`).
 
 ## Usage
 
-Run the training script:
+Run the CNN training:
 ```bash
 python cnn.py
 ```
 
-The model will:
-1. Load and preprocess images
-2. Normalize pixel values (0-1 range)
-3. Train for 10 epochs with batch size 32
-4. Output test accuracy
+The script will:
+1. Load and preprocess images from `digit_dataset/`
+2. Normalize pixel values to [0, 1] range
+3. Train the model for 10 epochs with batch size 32
+4. Evaluate and display test accuracy
 
 ## Results
 
-- **Test Accuracy**: ~92% (0.9199)
-- **Training**: 10 epochs, SGD optimizer
+- **Test Accuracy**: ~92%
+- **Optimizer**: SGD (Stochastic Gradient Descent)
 - **Loss Function**: Sparse Categorical Crossentropy
+- **Training Epochs**: 10
 
 ## Author
 
