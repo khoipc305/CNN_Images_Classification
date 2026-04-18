@@ -28,14 +28,24 @@ pip install tensorflow numpy pillow
 
 ## Dataset
 
+**Note:** The `digit_dataset/` folder is excluded from this repository due to its large size. The dataset is provided separately as `digit_dataset.zip`.
+
+### Dataset Structure
+
 The model expects images in the following structure:
 ```
 digit_dataset/
-├── train/
-└── test/
+├── train/    (training images)
+└── test/     (test images)
 ```
 
-Images should be 32x32 grayscale handwritten digits.
+Images should be 32x32 grayscale handwritten digits with filenames starting with their label (e.g., `0_image1.png`, `1_image2.png`).
+
+### Setup Instructions
+
+1. Obtain the `digit_dataset.zip` file (provided with assignment)
+2. Extract it to the project root directory
+3. The folder structure should be: `Asssignment 4/digit_dataset/train/` and `Asssignment 4/digit_dataset/test/`
 
 ## Usage
 
